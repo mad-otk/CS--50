@@ -1,4 +1,4 @@
-
+#include<stdbool.h>
 #include <stdio.h>
 #include<math.h>
 
@@ -12,7 +12,7 @@ int main(void)
         printf("Minimum: \n");
         scanf("%d", &min);
     }
-    while (min < 1);
+    while (min <= 1);
 
     int max;
     do
@@ -33,11 +33,13 @@ int main(void)
 
 bool prime(int number)
 {
-    for(int i=0;i<(sqrt(number)+2);i++)
-    {
-        if(number%i==0)
+    if(number==2)
+    return true;
+    for(int j=2;j<(sqrt(number)+1);j++)
+    {   
+        if(number%j==0){
             return false;
+        }
     }
     return true;
 }
-
