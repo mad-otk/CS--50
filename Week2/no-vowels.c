@@ -3,7 +3,7 @@
 #include<stdlib.h>
 
 // Replaces vowels with given symbols
-char* replace(char* input);
+void replace(char* input);
 
 int main(int argc, char* argv[])
 {
@@ -14,16 +14,13 @@ int main(int argc, char* argv[])
     }
     else
     {
-        char* output = replace(argv[1]);                                                   // Calls replace() to replace the vowels
-        printf("%s\n", output);
-        free(output);
-
+        replace(argv[1]);                                                   // Calls replace() to replace the vowels
     }
     return 0;
 }
     
 
-char* replace(char* input)
+void replace(char* input)
 {   
     
     int length = strlen(input);
@@ -42,6 +39,8 @@ char* replace(char* input)
         result[i] = input[i]; 
     }
     result[length]='\0';                                                                    // Display result
-    return result;
+    printf("The desired string is %s",result);
+    free(result);
+    return;
 }
     

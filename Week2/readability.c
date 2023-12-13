@@ -3,9 +3,11 @@
 #include <unistd.h>
 #include <string.h>
 #include <math.h>
+// PROBLEM : Calculate CL index of a given text and determine its level based on the complexity of the sentences and words.
 
-char* para(char *);
-void calculate_CL_index(char *, int);
+char* para(char *);                                         
+
+void calculate_CL_index(char *, int);              
 
 int main() {
 
