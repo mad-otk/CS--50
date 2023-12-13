@@ -89,5 +89,6 @@ char* process_cipher(char *input, char *key)
 
     ciphertext[text_length] = '\0';
     printf("Ciphered text: %s\n", ciphertext);                                 // Displays Ciphertext
+    free(ciphertext);
     return NULL;
 }
